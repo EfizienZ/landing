@@ -1,5 +1,8 @@
+html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
+  background-color: black;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +13,293 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  --hero-bg: linear-gradient(90deg, rgba(4,0,66,1) 30%, rgba(98,51,214,1) 100%);
+  --content-bg: linear-gradient(90deg, rgb(236, 230, 255) 50%, rgba(191,164,255,1) 100%);
+  --text-link-color-dark: rgb(252, 251, 255);
+  --text-link-color-dark-hover: rgba(191,164,255,1);
+  --text-title-color-dark: rgb(225, 212, 255);
+  --hero-button: rgba(255,127,0,1);
+  --text-link-color-light: rgb(70, 25, 175);
+  --text-link-color-light-hover: rgb(23, 0, 78);
+  --shadow-color: rgba(33, 17, 0, 0.7)
+}
+
+.ibm-plex-sans-thin {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+.ibm-plex-sans-extralight {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+.ibm-plex-sans-light {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.ibm-plex-sans-regular {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.ibm-plex-sans-medium {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.ibm-plex-sans-semibold {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.ibm-plex-sans-bold {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.ibm-plex-sans-thin-italic {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+.ibm-plex-sans-extralight-italic {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+.ibm-plex-sans-light-italic {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+.ibm-plex-sans-regular-italic {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.ibm-plex-sans-medium-italic {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+.ibm-plex-sans-semibold-italic {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+.ibm-plex-sans-bold-italic {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.gap-xl {
+  gap: 40px;
+}
+.center-items { 
+  justify-content: center;
+  align-items: center;
+}
+.pt-xl {
+  padding-top: 200px;
+}
+.pb-xl {
+  padding-bottom: 200px;
+}
+.pt-l {
+  padding-top: 100px;
+}
+.pb-l {
+  padding-bottom: 100px;
+}
+.pt-xs {
+  padding-top: 20px;
+}
+.pb-xs {
+  padding-bottom: 20px;
+}
+.mb-s {
+  margin-bottom: 30px;
+}
+.w-50 {
+  width: 50%;
+}
+.w-40 {
+  width: 40%;
+}
+.img-right {
+  width: 40%;
+  background-size: cover;
+  box-shadow: 5px 10px 20px var(--shadow-color);
+  border-radius: 10px;
+  transform: perspective(700px) rotateX(3deg) rotateY(3deg);
+  transition: all .3s ease-in-out;
+  &:hover {
+    transform: perspective(700px) rotateX(0deg) rotateY(0deg);
+  }
+}
+.button {
+  height: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+
+
+.nav-bar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100px;
+  padding: 12px;
+  transform: translateX(-50%);
+}
+
+.nav-bar-links {
+  gap: 32px; 
+  align-items: center;
+}
+
+.nav-logo {
+  height: 40px;
+  width: 40px;
+  background-size: cover;
+}
+
+.nav-bar-links a {
+  font-size: 16px;
+  color: var(--text-link-color-dark);   
+  text-decoration: none;
+  cursor: pointer;
+  transition: color .3s;
+  &:hover {
+    color: var(--text-link-color-dark-hover)
+  }
+}
+
+
+
+
+.hero-section {
+  background: var(--hero-bg);
+}
+
+.hero-wrapper {
+  position: relative;
+  justify-content: space-between;
+  padding: 32px;
+}
+
+.hero-image {
+  background-position: top;
+}
+
+.hero-container {
+  color: var(--text-title-color-dark);
+}
+
+.hero-container h1 {
+  font-size: 64px;
+  line-height: 56px;
+  margin-bottom: 30px;
+}
+
+.hero-container p {
+  width: 80%;
+}
+
+.button-hero-cta {
+  background: var(--hero-button);
+  color: var(--text-link-color-dark);
+}
+
+.button-hero-go-product {
+  background: transparent;
+  color: var(--text-link-color-dark);
+}
+
+
+
+
+
+.content-section {
+  background: var(--content-bg);
+}
+
+.content-wrapper {
+  position: relative;
+  padding: 32px;
+}
+
+.content-container {
+  width: 60%;
+  color: var(--text-link-color-light-hover);
+}
+
+.content-container h1 {
+  font-size: 48px;
+  line-height: 46px;
+  margin-bottom: 30px;
+}
+
+.content-container p {
+  margin-bottom: 0px;
+  width: 75%;
+}
+
+.before-percentage {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 600px;
+  height: 100%;
+  font-size: 250px;
+  color: var(--text-link-color-dark);
+  background: var(--hero-bg);
+  opacity: .05;
+  border-radius: 10px;
+  box-shadow: 5px 10px 20px var(--shadow-color);
+  text-shadow: 15px 15px 75px var(--shadow-color);
+  transform: perspective(500px) rotateX(10deg) rotateY(10deg);
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+    transform: perspective(500px) rotateX(0deg) rotateY(0deg);
+  }
+}
+
+.button-light {
+  color: var(--text-link-color-dark);
+  background: var(--text-link-color-light);
+}
+
+.go-button-light {
+  color: var(--text-link-color-light);
+}
+
+.use-cases {
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.use-cases p {
+  width: 30%;
 }
